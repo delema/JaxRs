@@ -34,22 +34,44 @@ Adding the Steps here.
     Choose git from the list shown; check the box asking create or use repository 
     -> click on create repository and click finish. - This will create a local git repo. (Assuming you already have git installed )
 
-    Right click on project -> Team -> Commit - Select only the files you want to commit and click on Commit. 
+    Right click on project -> Team -> Commit - Select only the files you want to commit
+    - Añadir al índice (stage)
+    - Click on Commit. 
     - Now the files are committed to your local repo.
 
     Go to git repositories view in eclipse ( or Team -> Show in repositories View)
 
-    Expand the git repo of your project and Right click on Remotes 
+    Expand the git repository of your project and Right click on Remotes 
     
     -> Create Remote
 
-    Remote name will appear as origin, select 'Configure Push' Option and click ok
+    Remote name will appear as origin, select 'Configure Push' Option and click Ok
 
-    In the next dialog, click on change next to URI textbox and give your git url, username, password and click on 'Save and Push'. 
+    In the next dialog, click on change next to URI textbox and give your git url, username, password and click on 'Save and Push'.
+    
+    https://github.com/delema/JaxRs.git
+    
     This configures git Push.
 
     For configuring Fetch, go to Git Repositories -> Remote -> Configure Fetch -> Add -> Master Branch -> Next -> Finish -> Save and Fetch
 
     For configuring Master Branch, Branch -> Local -> Master Branch -> Right click and configure branch -> Remote: origin and Upstream Branch : refs/heads/master -> click ok
+    
+    [core]
+	symlinks = false
+	repositoryformatversion = 0
+	filemode = false
+	logallrefupdates = true
+	autocrlf = input
+	eol = lf
+[remote "origin"]
+	url = https://github.com/delema/Gateway.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	push = HEAD:refs/heads/master
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+	rebase = true
+    
 
 On refreshing your repo, you will be able to see the files you committed and you can do push and pull from repo.
