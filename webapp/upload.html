@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Upload file</title>
+</head>
+<body>
+<form action="/jaxrs/rest/file"
+      enctype="multipart/form-data"
+      method="post">
+ <p>
+ Elegir fichero: <input type="file" name="file"/>
+ </p>
+ <p>
+ Elegir fichero: <input type="file" name="file"/>
+  </p>
+ <p>
+ <input type="submit" value="enviar">
+ </p>
+ <input type="hidden" name="data" value='{"name":"enrique","address":"Cañada 3","telephone":"678719499"}'/>
+</form>
+</body>
+</html>
